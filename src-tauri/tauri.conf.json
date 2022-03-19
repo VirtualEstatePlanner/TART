@@ -1,0 +1,63 @@
+{
+  "package": {
+    "productName": "your-package-name",
+    "version": "0.0.0"
+  },
+  "build": {
+    "distDir": "../build",
+    "devPath": "http://localhost:3000",
+    "beforeDevCommand": "react-scripts start",
+    "beforeBuildCommand": "react-scripts build && echo '> React application built successfully' && cd src-tauri && cargo update && cd .. && echo '> updated Cargo crates successfully'"
+  },
+  "tauri": {
+    "bundle": {
+      "active": true,
+      "targets": ["deb", "msi", "dmg"],
+      "identifier": "com.your-package-name.app",
+      "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.icns", "icons/icon.ico"],
+      "resources": [],
+      "externalBin": [],
+      "copyright": "©2018-2022 YOUR_NAME.",
+      "category": "DeveloperTool",
+      "shortDescription": "YOUR_APPLICATION_DESCRIPTION",
+      "longDescription": "YOUR_APPLICATION_DESCRIPTION.",
+      "deb": {
+        "depends": [],
+        "useBootstrapper": false
+      },
+      "macOS": {
+        "frameworks": [],
+        "minimumSystemVersion": "",
+        "useBootstrapper": false,
+        "exceptionDomain": "",
+        "signingIdentity": null,
+        "entitlements": null
+      },
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    "updater": {
+      "active": true,
+      "pubkey": "YOUR_APPLICATION_UPDATER_PUBLIC_KEY"
+    },
+    "allowlist": {
+    },
+    "windows": [
+      {
+        "title": "your-package-name",
+        "height": 1200,
+        "minHeight": 768,
+        "width": 1600,
+        "minWidth": 1024,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": "default-src blob: data: filesystem: ws: wss: http: https: tauri: 'unsafe-eval' 'unsafe-inline' 'self' img-src: 'self'"
+    }
+  }
+}
