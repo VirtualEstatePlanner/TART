@@ -68,6 +68,6 @@ Run `yarn build` to build a binary compiled for your OS. It will be in the `src-
 
 ### GitHub Actions
 
-By using the `tauri-actions` GitHub Actions, you can automatically build a distributable installer for all 3 desktop OSes.  This is the recommended way to build a distributable installer.  It's significantly easier than handling the build process manually from any random OS.  You can find the repo for the `tauri-actions` GitHub Actions [here](https://github.com/tauri-apps/tauri-action).  We have chosen not to include these files in the template because not everyone wants or needs to build cross-platform to all platforms, but more importantly because not everyone wants to use GitHub as their git hosting service.
+By using the `tauri-actions` GitHub Actions, you can automatically build a distributable installer for all 3 desktop OSes.  This is the recommended way to build a distributable installer.  It's significantly easier than handling the build process manually from any random OS.  You can find the repo for the `tauri-actions` [GitHub Actions](https://github.com/tauri-apps/tauri-action).  We have chosen not to include these files in the template because not everyone wants or needs to build cross-platform to all platforms, but more importantly because not everyone wants to use GitHub as their git hosting service.
 
 [TOC](#table-of-contents 'Jump back to the Table of Contents')
