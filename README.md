@@ -7,9 +7,7 @@
 1. [About TART](#about-tart 'Learn about TART')
 2. [Find and Replace](#find-and-replace-these-values-in-the-entire-project 'How to do your intial setup of the project')
 3. [Develop](#how-to-run-in-development-mode 'How to develop in hot-reload mode')
-4. [Build Prerequisites](#prerequisites-to-build-some-distributable-installers 'What you need to target specific distribution chanels')
-5. [Build for an OS](#how-to-build-distributable-installers-for-specific-platforms 'The commands to build a target for a given OS')
-6. [Build for all OSes](#how-to-build-distributable-installers-for-all-platforms 'The commands to build a target for all 3 OSes')
+4. [Build for an OS](#how-to-build-cross-platform 'The commands to build a target for a given OS')
 
 [](#about-crate)
 
@@ -19,6 +17,9 @@ TART is based on a simple idea: the import part of a tart is the filling.  You m
 
 TART is an easy way to roll React and Typescript into a hot-reloadable Tauri application to speed up development.
 
+### Prerequisites
+
+You will need [VS Code](https://code.visualstudio.com/download) and [Node.js](https://nodejs.org/en/download/) installed.
 
 [TOC](#table-of-contents 'Jump back to the Table of Contents')
 
