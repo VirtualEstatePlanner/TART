@@ -45,7 +45,7 @@ To start your project, you should find and replace the following symbols project
 
 ## How to run in development mode
 
-Then if you don't just want to stare at a spinning box icon on all 3 platforms you should probably develop your project:
+Then if you don't just want to stare at a spinning pastry icon on all 3 platforms you should probably start your project:
 
 1. Run `npm install` to install your dependencies from npm
 2. Run `yarn start` to start a hot-reloadable development server in a Tauri application
