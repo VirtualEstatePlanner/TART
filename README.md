@@ -7,6 +7,7 @@
 1. [About TART](#about-tart 'Learn about TART')
 2. [Find and Replace](#find-and-replace-these-values-in-the-entire-project 'How to do your intial setup of the project')
 3. [Develop](#how-to-run-in-development-mode 'How to develop in hot-reload mode')
+4. [Build local](#how-to-build-local 'How to build the application locally')
 4. [Build cross-platform](#how-to-build-cross-platform 'The commands to build a target for a given OS')
 
 [](#about-crate)
@@ -53,7 +54,13 @@ Then if you don't just want to stare at a spinning pastry icon on all 3 platform
 
 [TOC](#table-of-contents 'Jump back to the Table of Contents')
 
-[](#prerequisites-to-build-some-distributable-installers)
+## How to build for your OS
+
+[](#how-to-build-local)
+
+Run `yarn build` to build a binary compiled for your OS. It will be in the `src-tauri/target/release/bundle` directory.
+
+[TOC](#table-of-contents 'Jump back to the Table of Contents')
 
 ## How to build cross platform
 
