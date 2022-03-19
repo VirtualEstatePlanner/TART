@@ -7,7 +7,7 @@
 1. [About TART](#about-tart 'Learn about TART')
 2. [Find and Replace](#find-and-replace-these-values-in-the-entire-project 'How to do your intial setup of the project')
 3. [Develop](#how-to-run-in-development-mode 'How to develop in hot-reload mode')
-4. [Build for an OS](#how-to-build-cross-platform 'The commands to build a target for a given OS')
+4. [Build cross-platform](#how-to-build-cross-platform 'The commands to build a target for a given OS')
 
 [](#about-crate)
 
