@@ -1,0 +1,161 @@
+{
+  "name": "your-package-name",
+  "version": "0.0.0",
+  "description": "YOUR_APPLICATION_DESCRIPTON",
+  "productName": "YOUR_PRODUCT_NAME",
+  "author": "YOUR_NAME <YOUR_EMAIL_ADDRESS> (https://github.com/YOUR_GITHUB_USER)",
+  "copyright": "© 2021 YOUR_NAME",
+  "keywords": [],
+  "private": true,
+  "scripts": {
+    "start": "tauri dev",
+    "eject": "echo 'WARNING: THIS PROCESS CANNOT BE REVERSED - GIT COMMIT FIRST SO YOU CAN ROLL BACK' && echo && echo 'if you really hate create-react-app this much, manually run:' && echo && echo '                                                            yarn react-scripts eject' && echo",
+    "clean": "rm -rf node_modules/* src-tauri/target/* package-lock.json yarn.lock yarn-error-log",
+    "sign": "tauri signer generate",
+    "build": "tauri build",
+    "test": "jest --watch",
+    "cover": "jest --coverage",
+    "pretty": "node node_modules/.bin/prettier --write .",
+    "prep-tsnode-script": "cp ./src/scripts/tsnode/scripts.tsconfig.json ./tsconfig.json",
+    "cleanup-tsnode-script": "cp ./src/scripts/tsnode/regular.tsconfig.json ./tsconfig.json",
+    "update": "rm -rf yarn.lock node_modules/ src-tauri/Cargo.lock && yarn && cd src-tauri && cargo update && cd ..",
+    "bundle": "yarn prep-tsnode-script && yarn ts-node src/scripts/utility/moveBundle.ts && yarn cleanup-tsnode-script",
+    "zip": "yarn prep-tsnode-script && yarn ts-node src/scripts/utility/webzip.ts && yarn cleanup-tsnode-script"
+  },
+  "dependencies": {
+    "@emotion/react": "latest",
+    "@emotion/styled": "latest",
+    "@fontsource/asap": "latest",
+    "@mui/icons-material": "latest",
+    "@mui/material": "latest",
+    "@mui/styles": "latest",
+    "@tauri-apps/api": "1.0.0-rc.2",
+    "@testing-library/jest-dom": "latest",
+    "@testing-library/react": "latest",
+    "@testing-library/user-event": "latest",
+    "jszip": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "source-map-support": "latest",
+    "typescript": "latest"
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/plugin-transform-modules-commonjs": "latest",
+    "@babel/preset-react": "latest",
+    "@tauri-apps/cli": "1.0.0-rc.7",
+    "@tauri-apps/tauricon": "github:tauri-apps/tauricon",
+    "@types/jest": "latest",
+    "@types/node": "latest",
+    "@types/prettier": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "async": "latest",
+    "jest": "latest",
+    "prettier": "latest",
+    "react-scripts": "latest",
+    "ts-node": "latest",
+    "typescript": "latest",
+    "yarn": "latest"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "@babel/plugin-transform-modules-commonjs"
+        ]
+      }
+    },
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-typescript",
+      "@babel/preset-react"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{ts,tsx}",
+      "!**/node_modules/**"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/build/",
+      "/dist/",
+      "/public/",
+      "/node_modules/",
+      "/src-tauri/",
+      "/src/functions.runningInTauri.ts",
+      "/src/index.tsx",
+      "/src/interfaces/",
+      "/src/react-app-env.d.ts",
+      "/src/scripts/",
+      "/src/styles/",
+      "/src/stylesDark/",
+      "/src/stylesLight/",
+      "/src/tests/",
+      "/src/typings/",
+      "/static/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 72,
+        "functions": 48,
+        "lines": 69,
+        "statements": 65
+      }
+    },
+    "displayName": {
+      "name": "your-package-name",
+      "color": "blue"
+    },
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "png"
+    ],
+    "moduleNameMapper": {
+      "\\.(css)$": "<rootDir>/src/typings/css.d.ts",
+      "\\.(jp?eg)$": "<rootDir>/src/typings/jpg.d.ts",
+      "\\.(png)$": "<rootDir>/src/typings/png.d.ts",
+      "\\.(svg)$": "<rootDir>/src/typings/svg.d.ts"
+    },
+    "transform": {
+      "^.+\\.[jt]sx?$": "babel-jest"
+    }
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "jsxBracketSameLine": true,
+    "jsxSingleQuote": true,
+    "requirePragma": true,
+    "printWidth": 200,
+    "quoteProps": "consistent",
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none"
+  }
+}
