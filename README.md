@@ -35,7 +35,8 @@ To start your project, you should find and replace the following symbols project
 5. `YOUR_NAME` => your human name
 6. `YOUR_EMAIL_ADDRESS` => your email address
 7. `YOUR_COMPANY_NAME` => your company name
-8. `YOUR_APPLICATION_UPDATER_PUBLIC_KEY` => your application's tauri updater public key
+8. `YOUR_REPO_NAME` => your repository name
+9. `YOUR_APPLICATION_UPDATER_PUBLIC_KEY` => your application's tauri updater public key
 
 [TOC](#table-of-contents 'Jump back to the Table of Contents')
 
